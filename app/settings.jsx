@@ -1,8 +1,12 @@
 import { View, Text, StyleSheet } from 'react-native';
 
+import Header from '../components/header.module';
+
 export default function SettingsScreen() {
   return (
     <View style={styles.container}>
+      <Header/>
+
       <Text style={styles.title}>Configurações</Text>
     </View>
   );
@@ -11,11 +15,14 @@ export default function SettingsScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    justifyContent: 'flex-start', 
+    alignItems: 'stretch',        
+    backgroundColor: '#fff',  
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
+    marginTop: 20,                
+    alignSelf: 'center',  
   },
 });
