@@ -6,17 +6,27 @@ export default function DrawerLayout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer screenOptions={{
         headerShown: false, 
-        drawerInactiveTintColor: "#666", // Cor dos ícones inativos
+        drawerInactiveTintColor: "#666",
         drawerStyle: {
-          backgroundColor: "#fff", // Cor de fundo do Drawer
+          backgroundColor: "#fff",
         },
       }}>
-        <Drawer.Screen name="home"
+        <Drawer.Screen 
+          name="index"
           options={{
-            drawerLabel: 'Home',
             headerShown: false,
             headerLeft: false,
+            drawerLabel: 'Home',
             title: 'Home',
+          }}
+        />
+        <Drawer.Screen
+          name="categories"
+          options={{
+            headerShown: false,
+            headerLeft: false,
+            drawerLabel: 'Categorias',
+            title: 'Categorias',
           }}
         />
         <Drawer.Screen

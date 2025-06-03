@@ -1,5 +1,6 @@
 import React from 'react';
-import { ScrollView, View, Text, StyleSheet, Image } from 'react-native';
+import { ScrollView, View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const categorias = [
     {
@@ -20,7 +21,7 @@ const categorias = [
     },
     {
         nome: 'Smart Tv',
-        icone: 'https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2F03ab3130-0a2b-4015-b0ba-22171dd6929d___4ea0b9357dd557d782cd216fed810c19.png&w=154&q=75',
+        icone: 'https://www.americanas.com.br/_next/image?url=https%3A%2F%2Famericanas.vtexassets.com%2Fassets%2Fvtex.file-manager-graphql%2Fimages%2Fd013ef2e-09c0-4c33-83bc-534a03756616___9d302addd80ba3a461f3a163df715094.png&w=154&q=75',
     },
     {
         nome: 'Esportes',
@@ -37,6 +38,8 @@ const categorias = [
 ];
 
 const Categorias = () => {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.container}>
             <Text style={styles.titulo}>
@@ -44,12 +47,16 @@ const Categorias = () => {
             </Text>
             <ScrollView horizontal showsHorizontalScrollIndicator={false} style={styles.scroll}>
                 {categorias.map((cat, idx) => (
-                    <View key={idx} style={styles.categoria}>
+                    <TouchableOpacity
+                        key={idx}
+                        style={styles.categoria}
+                        onPress={() => navigation.navigate('categories')}
+                    >
                         <View style={styles.iconeContainer}>
                             <Image source={{ uri: cat.icone }} style={styles.icone} />
                         </View>
                         <Text style={styles.nome}>{cat.nome}</Text>
-                    </View>
+                    </TouchableOpacity>
                 ))}
             </ScrollView>
         </View>
