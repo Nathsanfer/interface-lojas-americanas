@@ -42,5 +42,52 @@ export default function Header() {
 }
 
 const styles = StyleSheet.create({
-    
+    headerContainer: {
+        backgroundColor: "#f80132",
+        paddingTop: 30, // para status bar
+        paddingHorizontal: 12,
+        paddingBottom: 12,
+    },
+    headerTop: {
+        flexDirection: "row",
+        alignItems: "center",
+        justifyContent: "space-between",
+        marginBottom: 10,
+    },
+    logo: {
+        width: 140,
+        height: 32,
+    },
+    menuButton: {
+        padding: 4,
+    },
+    cartButton: {
+        padding: 4,
+    },
+    searchContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+        backgroundColor: "#fff",
+        borderRadius: 22,
+        paddingHorizontal: 14,
+        height: 40,
+        marginBottom: 10,
+    },
+    searchInput: {
+        flex: 1,
+        fontSize: 16,
+        color: "#333",
+    },
+    searchIcon: {
+        marginLeft: 8,
+    },
+    cepContainer: {
+        flexDirection: "row",
+        alignItems: "center",
+        marginTop: 5,
+    },
+    cepText: {
+        color: "#fff",
+        fontSize: 15,
+    },
 });
