@@ -1,27 +1,24 @@
-import { View, Text, StyleSheet } from 'react-native';
+import { ScrollView, Text, StyleSheet } from 'react-native';
 
 import Header from '../components/header.module';
 import PromoBanners from '../components/promoBanner.module';
+import LoginCard from '../components/loginCard';
 
 export default function HomeScreen() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Header/>
 
       <PromoBanners/>
 
+      <LoginCard/>
 
-
-      <Text style={styles.title}>Bem-vindo à Página Inicial!</Text>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'flex-start', 
-    alignItems: 'stretch',        
+  container: {      
     backgroundColor: '#fff',  
   },
   title: {
