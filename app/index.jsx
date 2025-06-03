@@ -1,36 +1,44 @@
 import { ScrollView, Text, StyleSheet } from 'react-native';
 
-import Header from '../components/header.module';
-import PromoBanners from '../components/promoBanner.module';
-import LoginCard from '../components/loginCard';
-import CupomCard from '../components/cupomCard'; // Assuming you want to include this as well
+import Header from '../components/header.jsx';
+import PromoBanners from '../components/promoBanner.jsx';
+import LoginCard from '../components/loginCard.jsx';
+import CupomCard from '../components/cupomCard.jsx';
+import EntregaCard from '../components/entregaCard.jsx';
+import Categorias from '../components/categorias.jsx';
+import BannerCard from '../components/bannerCard.jsx';
 
 export default function HomeScreen() {
   return (
     <ScrollView style={styles.container}>
-      <Header/>
+      <Header />
 
-      <PromoBanners/>
+      <PromoBanners />
 
-      <LoginCard/>
+      <LoginCard />
 
-      <CupomCard/>
+      <CupomCard />
 
-    </ScrollView>
+      <EntregaCard />
+
+      <Categorias /> 
       
+      <BannerCard />
+    </ScrollView>
 
-    
+
+
   );
 }
 
 const styles = StyleSheet.create({
-  container: {      
-    backgroundColor: '#f8f8f8',  
+  container: {
+    backgroundColor: '#f8f8f8',
   },
   title: {
     fontSize: 24,
     fontWeight: 'bold',
-    marginTop: 20,                
-    alignSelf: 'center',  
+    marginTop: 20,
+    alignSelf: 'center',
   },
 });

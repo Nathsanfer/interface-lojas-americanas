@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     elevation: 1,
   },
   left: {
-    flex: 0.8 ,
+    flex: 1.0,
     alignItems: "flex-start",
   },
   separator: {
@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
   },
   valor: {
-    fontSize: 35,
+    fontSize: 32,
     fontWeight: "bold",
     color: "#222",
   },

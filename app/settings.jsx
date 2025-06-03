@@ -1,6 +1,6 @@
 import { View, Text, StyleSheet } from 'react-native';
 
-import Header from '../components/header.module';
+import Header from '../components/header.jsx';
 
 export default function SettingsScreen() {
   return (

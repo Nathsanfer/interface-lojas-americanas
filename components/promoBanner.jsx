@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
   banner: {
     backgroundColor: '#e30613',
     borderRadius: 16,
-    width: 90,
-    height: 90,
+    width: 70,
+    height: 70,
     marginRight: 12,
     justifyContent: 'center',
     alignItems: 'center',
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   bannerTitle: {
     color: '#fff',
     fontWeight: 'bold',
-    fontSize: 16,
+    fontSize: 14,
     textAlign: 'center',
     lineHeight: 20,
   },
