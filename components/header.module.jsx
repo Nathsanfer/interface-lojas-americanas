@@ -44,7 +44,7 @@ export default function Header() {
 const styles = StyleSheet.create({
     headerContainer: {
         backgroundColor: "#f80132",
-        paddingTop: 30, // para status bar
+        paddingTop: 30, 
         paddingHorizontal: 12,
         paddingBottom: 12,
     },
